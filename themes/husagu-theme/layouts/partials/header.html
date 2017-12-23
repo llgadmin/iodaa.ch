@@ -1,0 +1,26 @@
+<header class="navigation">
+    <a href="{{ .Site.BaseURL }}">
+        <img src="/images/iodaa_logo.svg" alt="iodaa logo" class="navigation__logo">
+    </a>
+    <div id="toggle" class="navigation__menuIcon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>   
+    <nav class="navigation__overlay" role="navigation">
+    <div class="navigation__flexContainer">
+        {{ if .Site.Menus.main }}
+        <ul class="navigation__list">
+        	{{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li class="navigation__item">
+                <a class="navigation__link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} navigation__link--active{{end}}" href="{{ .URL }}" title="{{ .Name }} page">
+                  {{ .Name }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+    </nav>
+</header>

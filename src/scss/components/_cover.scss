@@ -1,0 +1,52 @@
+.cover
+{
+    position: relative;
+
+    width: 100%;
+    //margin-top: 80px;
+    padding-bottom: 80%;
+
+    border-bottom: 4px solid $black;
+    background: url('https://static1.squarespace.com/static/53711ac5e4b02c5d204b1870/552d4328e4b0a40523aa4f05/552d48b8e4b07a7dd6a0396a/1429031097253/MHeiderich_SLII_014.jpg') center no-repeat;
+    background-size: cover;
+
+    filter: grayscale(1);
+
+    @include small {
+        padding-bottom: 50%;
+    }
+    @include large {
+        padding-bottom: 40%;
+        border-bottom: 10px solid $black;
+    }
+
+}
+.cover__headlineBlock
+{
+    position: absolute;
+    bottom: -1.5em;
+
+    display: block;
+
+    width: 70%;
+    padding: 1em $body-padding;
+
+    background: #fff;
+
+    @include medium {
+        padding: 1em $body-padding-md;
+    }
+    @include large {
+        padding: 1em $body-padding-lg;
+    }    
+}
+.cover__headline
+{
+    font-size: 2em;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0;
+
+    color: $black;
+}

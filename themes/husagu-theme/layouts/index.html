@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="homepage__main">
+
+	<section class="cover">
+		<article class="cover__headlineBlock">
+			<h1 class="cover__headline">Bernsky house</h1>
+		</article>
+	</section>
+
+	
+	<section class="homepage__news">
+		{{ $posts := (where .Site.RegularPages "Section" "==" "projects") }}
+		{{ $postCount := len $posts }}        	
+        {{ $.Scratch.Add "a1" $postCount }}
+    	{{ range first 2 .Pages }}
+        	<article class="projectsList__list {{.Params.categories}}">
+        		<a href="{{.URL}}"><section class="projectsList__info">
+        			{{ if lt ($.Scratch.Get "a1") 10 }}
+        			<h2 class="projectsList__number">0{{ $.Scratch.Get "a1" }}</h2>
+        			{{ else }}
+        			<h2 class="projectsList__number">{{ $.Scratch.Get "a1" }}</h2>
+        			{{ end }}
+        			<h4 class="projectsList__name">{{.Title}}</h4>
+     				<p class="projectsList__category">{{.Params.categories}}</p>
+     				<p class="projectsList__date">{{ dateFormat "02.01.2006" .Params.date }}
+     				</p>
+     				<div class="projectsList__thumb" style="background-image: url('{{.Params.featuredImage}}')"></div>
+        		</section></a>
+        	</article>
+    	{{ $.Scratch.Add "a1" -1 }}	
+		{{ end }}			
+	</section>
+
+	<h1 class="homepage__headline">
+		iodaa
+	</h1>
+	<article class="homepageIodaa">
+		<p class="homepageIodaa__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ab. Magni dolorem sunt consectetur repellat voluptatibus laudantium ratione asperiores facilis repudiandae natus, dolorum porro a, voluptatum nulla non temporibus laborum.</p>		
+	</article>			
+
+	<section class="homepageLinks">
+		<h4><a href="{{ .Site.BaseURL }}projects/" class="homepageLinks__link">Browse our work</a></h4>
+		<h4><a href="{{ .Site.BaseURL }}disciplines/" class="homepageLinks__link">Explore our disciplines</a></h4>
+		<h4><a href="{{ .Site.BaseURL }}about/" class="homepageLinks__link">Get to know us</a></h4>
+	</section>
+</section> 
+
+{{ end }}
+
+

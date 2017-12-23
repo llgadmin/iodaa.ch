@@ -1,0 +1,56 @@
+@font-face
+{
+    font-family: 'iodaa-font';
+    font-weight: bold;
+    font-style: normal;
+
+    src: url('../fonts/helveticaneue-bold.woff2') format('woff2'),
+    url('../fonts/helveticaneue-bold.woff') format('woff'),
+    url('../fonts/helveticaneue-bold.ttf') format('truetype');
+}
+@font-face
+{
+    font-family: 'iodaa-font';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/helveticaneue.woff2') format('woff2'),
+    url('../fonts/helveticaneue.woff') format('woff'),
+    url('../fonts/helveticaneue.ttf') format('truetype');
+}
+
+body,
+*,
+*:before,
+*:after
+{
+    font-family: (Helvetica, 'iodaa-font', serif);
+}
+h1
+{
+    font-size: 5.063em;
+    font-weight: bold;
+}
+
+h2
+{
+    font-size: 3.375em;
+    font-weight: bold;
+}
+h3
+{
+    font-size: 2.25em;
+    font-weight: bold;
+}
+h4
+{
+    font-size: 1.5em;
+    font-weight: bold;
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+$h1Size: 5.063em;
+$h2Size: 3.375em;
+$h3Size: 2.25em;
+$h4Size: 1.5em;

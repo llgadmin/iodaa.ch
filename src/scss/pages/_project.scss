@@ -1,0 +1,60 @@
+.project__cover
+{
+    position: relative;
+
+    max-height: 500px;
+    margin-top: 80px;
+    padding: $body-padding $body-padding 80% $body-padding;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    filter: grayscale(1);
+}
+.project__title
+{
+    line-height: 1em;
+
+    margin: 3rem 0 0 0;
+}
+.project__title:before
+{
+    position: absolute;
+    top: 3rem;
+
+    width: 20%;
+    height: 5px;
+
+    content: '';
+
+    border-bottom: 5px solid $black;
+}
+.project__category
+{
+    font-size: 1em;
+
+    position: absolute;
+    right: 2rem;
+    bottom: 7rem;
+
+    width: 0;
+    margin: 0;
+
+    transform: rotate(90deg);
+    transform-origin: bottom;
+}
+.project__main
+{
+    padding: $body-padding;
+}
+.project__gallery
+{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.project__image
+{
+    max-width: 100%;
+}

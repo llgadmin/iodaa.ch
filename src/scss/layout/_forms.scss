@@ -1,0 +1,82 @@
+.contact-cover__form
+{
+    margin: 0 $body-padding;
+    padding: 0 2rem;
+
+    background: #fff;
+
+    @include medium 
+    {
+        width: 60%;
+        margin: 0 auto;
+        padding: 1rem $body-padding-md;
+    }
+
+    label
+    {
+        display: block;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea
+    {
+        font-family: Helvetica, 'iodaa-font', serif;
+        font-size: 1.75rem;
+        font-weight: bold;
+
+        width: 100%;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+
+        border: 0;
+        border-bottom: 2px solid $black;
+        outline: none;
+    }
+
+    input[type=text]::placeholder,
+    input[type=email]::placeholder,
+    textarea::placeholder
+    {
+        font-size: 1.15rem;
+
+        color: $light-gray;
+    }
+    textarea
+    {
+        line-height: 1em;
+
+        margin: 0;
+        padding-top: .7rem;
+        padding-bottom: 0;
+
+        resize: none;
+        vertical-align: bottom;
+    }
+}
+.form__label
+{
+    font-size: 1.3em;
+
+    color: $medium-gray;
+}
+.form-buttonWrapper
+{
+    width: 100%;
+
+    text-align: center;
+}
+#form-submit
+{
+    font-family: Helvetica, 'iodaa-font', serif;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    margin: 2rem auto;
+    padding: .7rem 1.5rem;
+
+    color: #fff;
+    border: none;
+    outline: none;
+    background: $black;
+}

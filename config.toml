@@ -1,0 +1,25 @@
+baseURL = "https://iodaa.ch/"
+languageCode = "en-us"
+title = "iodaa"
+theme = "husagu-theme"
+
+[[menu.main]]
+    name = "Home"
+    weight = -110
+    url = "/"
+[[menu.main]]
+    name = "Projects"
+    weight = -110
+    url = "/projects/"
+[[menu.main]]
+    name = "Disciplines"
+    weight = -100
+    url = "/disciplines/"
+[[menu.main]]
+    name = "About"
+    weight = -90
+    url = "/about/"
+[[menu.main]]
+    name = "Contact"
+    weight = -80
+    url = "/contact/"

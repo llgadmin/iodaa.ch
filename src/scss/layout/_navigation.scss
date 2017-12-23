@@ -1,0 +1,149 @@
+/* Top bar navigation mobile */
+.navigation
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background: #fff;
+
+    @include large 
+    {
+        height: 100px;
+        background: none;
+    }
+}
+.navigation__background 
+{
+    @include large 
+    {
+        background: #fff;
+    }    
+}
+.navigation__logo
+{
+    width: 25%;
+    max-width: 100px;
+    margin-top: 23px;
+    margin-left: 2em;
+
+    @include medium
+    {
+        margin-left: $body-padding-md;
+    }    
+    @include large
+    {
+        margin-left: $body-padding-lg;
+        margin-top: 28px;
+        max-width: 120px;
+    }
+}
+.navigation__overlay
+{
+    position: fixed;
+    z-index: 999;
+
+    display: flex;
+    visibility: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate3d(-100%, 0, 0);
+
+    opacity: 0;
+    background: #fff;
+
+    will-change: transform;
+    align-items: center;
+    justify-content: center;
+    @include transition-ease(.50s);
+
+    li
+    {
+        position: relative;
+
+        opacity: 0;
+    }
+
+    &.open
+    {
+        visibility: visible;
+        overflow: hidden;
+
+        transform: none;
+
+        opacity: 1;
+
+        li
+        {
+            animation: fadeInRight .50s ease forwards;
+            animation-delay: .50s;
+
+            &:nth-of-type(2)
+            {
+                animation-delay: .60s;
+            }
+            &:nth-of-type(3)
+            {
+                animation-delay: .70s;
+            }
+            &:nth-of-type(4)
+            {
+                animation-delay: .80s;
+            }
+            &:nth-of-type(5)
+            {
+                animation-delay: .90s;
+            }
+        }
+    }
+}
+.navigation__flexContainer
+{
+    width: 60%;
+}
+.navigation__list
+{
+    display: block;
+
+    width: 50%;
+    margin-top: -120px;
+    padding: 0 0 0 2em;
+
+    list-style-type: none;
+}
+.navigation__link
+{
+    font-size: 1.3em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: 1em auto;
+
+    text-decoration: none;
+
+    color: $black;
+
+    @include medium
+    {
+        font-size: 1.5em;
+    }
+    @include large
+    {
+        font-size: 1.8em;
+    }
+}
+.navigation__link--active
+{
+    color: $iodaa-red;
+}
+.navigation__link:hover,
+.navigation__link:focus
+{
+    color: $iodaa-red;
+}

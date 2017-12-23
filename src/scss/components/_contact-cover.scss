@@ -1,0 +1,30 @@
+.contact-cover
+{
+    position: relative;
+
+    width: 100%;
+    margin-top: 80px;
+
+    background-image: url('http://a.abcnews.com/images/Travel/gty_abbey_library_kb_130412_wmain.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    filter: grayscale(1);
+}
+.contact-cover__headline
+{
+    margin: 0 $body-padding -1.8rem $body-padding;
+    padding-top: 2rem;
+
+    color: #fff;
+
+    @include medium
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 -1.8rem 0;
+        //margin: 0 $body-padding-md -1.8rem $body-padding-md;
+    }
+}

@@ -1,0 +1,112 @@
+.homepage__main
+{
+    position: relative;
+}
+.homepage__headline
+{
+    z-index: -90;
+
+    margin: 1rem 0 2rem $body-padding;
+    padding: 0;
+
+    color: $black;
+
+    @include medium{
+        margin: 1rem 0 2rem $body-padding-md;
+    }
+    @include medium{
+        margin: 1rem 0 2rem $body-padding-lg;
+    }    
+}
+.homepage__news
+{
+    z-index: 100;
+
+    display: flex;
+
+    padding: 4rem $body-padding 0 $body-padding;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include medium {
+        width: 75%;
+        padding: 4rem $body-padding-md 0 $body-padding-md;
+    }
+    @include large {
+        width: 100%;
+        padding: 4rem $body-padding-lg 0 $body-padding-lg; 
+        justify-content: flex-start;
+    }
+    
+    .projectsList__list {
+        @include large {
+            margin-right: $body-padding-lg;
+            width: 30vw;
+        }
+    }
+
+}
+.homepageIodaa
+{
+    z-index: 100;
+
+    margin-top: -2.8rem;
+    padding: 0 $body-padding;
+
+    @include medium {
+        padding: 0 $body-padding-md;
+    }
+    @include large {
+        padding: 0 $body-padding-lg;
+    }
+}
+.homepageIodaa__text
+{
+    margin-bottom: 3rem;
+    padding-bottom: 2em;
+    max-width: 500px;
+
+    background: #fff;
+}
+.homepageLinks
+{
+    text-align: center;
+
+    h4
+    {
+        padding-bottom: 1rem;
+
+        @include large {
+            display: inline;
+            margin-right: 1rem;
+        }        
+    }
+    h4:last-child {
+        margin-right: 0px;
+    }   
+}
+.homepageLinks__link
+{
+    display: inline-block;
+
+    max-width: 80%;
+    padding: .7rem 1.5rem;
+
+    text-decoration: none;
+
+    color: $black;
+    border: 4px solid $black;
+    background: #fff;
+
+    &:hover,
+    &:focus 
+    {
+        background: $iodaa-red;
+        color: #fff;
+    } 
+
+    @include large {
+        display: inline;
+    }
+}

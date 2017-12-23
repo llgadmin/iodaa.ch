@@ -1,0 +1,240 @@
+.projects__headline
+{
+    margin: $body-padding;
+    margin-bottom: -2.7rem;
+    padding-top: 4rem;
+
+    color: $black;
+
+    @include medium
+    {
+        margin-left: $body-padding-md;
+    }
+    @include large
+    {
+        position: absolute;
+        top: 27rem;
+        left: 0;
+        margin-left: -0.5rem;
+        font-size: $h1Size * 1.5;
+
+        transform: rotate(270deg);
+
+        &:before
+        {
+            position: absolute;
+            z-index: -1000;
+
+            display: block;
+
+            width: 300px;
+            height: 300px;
+
+            top: -47px;
+            left: -4.5rem;
+
+            content: '';
+
+            background: $iodaa-red;
+        }
+    }
+}
+.projects__container
+{
+    @include large
+    {
+        padding-top: 7rem;
+    }
+}
+.projectsNavigation__list
+{
+    padding: 1.3em 0 1.3em $body-padding;
+
+    list-style-type: none;
+
+    @include medium
+    {
+        padding: 1.3em 0 1.3em $body-padding-md;
+    }
+    @include large
+    {
+        padding-right: $body-padding-lg;
+
+        text-align: right;
+
+        font-size: $h4Size * 1.1;
+    }
+}
+.projectsNavigation__item
+{
+    display: inline-block;
+
+    margin: 0 1em 0 0;
+    padding: 0;
+
+
+
+    @include large 
+    {
+        margin-right: 2em;
+    }
+
+    &:last-child
+    {
+        margin-right: 0;
+    }
+}
+.projectsNavigation__link
+{
+    font-size: 1.2em;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    color: $black;
+
+    &:hover,
+    &:focus
+    {
+        color: $iodaa-red;
+    }
+}
+.active
+{
+    text-decoration: underline;
+
+    color: $iodaa-red;
+}
+.projects
+{
+    display: flex;
+
+    margin: $body-padding;
+    margin-top: 2rem;
+
+    flex-wrap: wrap;
+    justify-content: space-between; //center?
+    @include medium
+    {
+        margin: $body-padding-md;
+    }
+    @include large
+    {
+        float: right;
+
+        width: 60%;
+        margin: $body-padding-lg;
+    }
+}
+.projectsList__list
+{
+    font-weight: bold;
+
+    width: 40vw;
+    max-width: 320px;
+    margin-bottom: 3em;
+
+    animation: fadeIn .65s ease forwards;
+
+    border-top: 8px solid $black;
+
+    @include small
+    {
+        width: 42vw;
+    }
+    @include medium
+    {
+        width: 27vw;
+    }
+    @include large
+    {
+        width: 30%;
+        border-top: 15px solid $black;
+    }
+
+    &:hover,
+    &:focus
+    {
+        border-color: $iodaa-red;
+        h2
+        {
+            color: $iodaa-red;
+        }
+    }
+}
+.projectsList__number
+{
+    margin: 0;
+
+    color: $black;
+
+    @include large
+    {
+        font-size: $h2Size * 1.8;
+    }
+}
+.projectsList__name
+{
+    font-size: 1.25em; //Jumping out of Typ-Scale because of ultra small screens
+    line-height: 1em;
+
+    min-height: 3rem;
+    margin: 0;
+    margin-top: -.6rem;
+
+    color: $black;
+
+    @include large
+    {
+        min-height: 5rem;
+        font-size: 1.8em;
+    }
+}
+.projectsList__category
+{
+    font-size: .667em;
+
+    margin: 0;
+    margin-top: 1rem;
+
+    text-align: right;
+
+    color: $black;
+
+    @include large
+    {
+        font-size: 1em;
+    }
+}
+.projectsList__date
+{
+    font-size: .667em;
+
+    margin: 0;
+    margin-bottom: .667rem;
+
+    text-align: right;
+
+    color: $black;
+
+    @include large
+    {
+        font-size: 1em;
+    }    
+}
+.projectsList__thumb
+{
+    width: 100%;
+    height: 100px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    filter: grayscale(1);
+    @include large
+    {
+        height: 180px;
+    }
+}

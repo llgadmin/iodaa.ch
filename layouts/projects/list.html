@@ -1,0 +1,55 @@
+{{ define "main" }}
+	<h1 class="projects__headline">projects</h1>
+	<section class="projects__container">
+
+		<ul class="projectsNavigation__list">
+			<li class="projectsNavigation__item">
+				<h4 class="projectsNavigation__link active" id="All">All</h4>
+			</li>			
+			<li class="projectsNavigation__item">
+				<h4 class="projectsNavigation__link" id="Design">Design</h4>
+			</li>
+			<li class="projectsNavigation__item">
+				<h4 class="projectsNavigation__link" id="Architecture">Architecture</h4>
+			</li>
+			<li class="projectsNavigation__item">
+				<h4 class="projectsNavigation__link" id="Arts">Arts</h4>
+			</li>
+		</ul>
+		<div class="clearfix">
+    <section class="projects" id="project-list">
+		  {{ $posts := (where .Site.RegularPages "Section" "==" "projects") }}
+		  {{ $postCount := len $posts }}        	
+      {{ $.Scratch.Add "a1" $postCount }}
+    	{{ range .Pages }}
+    	<article class="projectsList__list {{.Params.categories}}">
+    		<a href="{{.URL}}"><section class="projectsList__info">
+    			{{ if lt ($.Scratch.Get "a1") 10 }}
+    			<h2 class="projectsList__number">0{{ $.Scratch.Get "a1" }}</h2>
+    			{{ else }}
+    			<h2 class="projectsList__number">{{ $.Scratch.Get "a1" }}</h2>
+    			{{ end }}
+    			<h4 class="projectsList__name">{{.Title}}</h4>
+ 				  <p class="projectsList__category">{{.Params.categories}}</p>
+ 				  <p class="projectsList__date">{{ dateFormat "02.01.2006" .Params.date }}</p>
+ 				  <div class="projectsList__thumb" style="background-image: url('{{.Params.featuredImage}}')"></div>
+    		</section></a>
+    	</article>
+    	{{ $.Scratch.Add "a1" -1 }}	
+		{{ end }}	
+    </section>
+  </div>
+		
+	</section>
+
+               <!--<div style="font-size:20px;">
+                    <a href="{{.URL}}">{{.Title}}</a>
+               </div>
+               <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+               <div style="color:grey; font-size:16px;">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+               <div style="color:grey; font-size:16px;">{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+               <div style="color:grey; font-size:16px;">{{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+               <p style="font-size:18px;">{{.Summary}}</p>-->
+
+{{ end }}

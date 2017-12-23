@@ -1,0 +1,29 @@
+@mixin background-opacity($color, $opacity: .3)
+{
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin transition-ease($duration)
+{
+    transition: all $duration ease;
+}
+
+@mixin shadow($opacity)
+{
+    box-shadow: 0 22px 58px -27px rgba(0,0,0, $opacity);
+}
+
+/* Responsive mixins */
+@mixin small {
+	@media (min-width: 500px) { @content; }	
+}
+@mixin medium {
+	@media (min-width: 600px) { @content; }	
+}
+@mixin large {
+	@media (min-width: 1000px) { @content; }	
+}
+@mixin extra {
+	@media (min-width: 1200px) { @content; }	
+}

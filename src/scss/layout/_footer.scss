@@ -1,0 +1,220 @@
+.footer 
+{   
+    @include large
+    {
+        margin: 0 $body-padding-lg 0 $body-padding-lg;
+        position: relative;
+    }
+}
+.footer__top
+{
+    display: flex;
+
+    margin-top: 5rem;
+    padding: 1rem 0;
+
+    background: $medium-gray;
+
+    justify-content: flex-start;
+    flex-wrapper: wrap;
+
+    @include large
+    {
+        padding: 1.5rem 0;
+    }
+}
+.footerMenu__list
+{
+    display: block;
+
+    width: 40%;
+    padding: 0 0 0 $body-padding;
+
+    list-style-type: none;
+
+    @include small
+    {
+        width: 30%;
+    }
+    @include large
+    {
+        width: 20%;
+        color: $black;
+        padding: 0 0 0 $body-padding-lg;
+    }
+    @include extra
+    {
+        width: 15%;
+    }
+}
+
+.footerMenu__link
+{
+    font-size: 1em;
+    font-weight: bold;
+
+    display: block;
+
+    margin-bottom: .1em;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    &:hover,
+    &:focus
+    {
+        color: $iodaa-red;
+    }    
+
+    @include small 
+    {
+        font-size: 1.3em;
+    }
+    @include large
+    {
+        color: $black;
+    }
+}
+.footerMenu__details
+{
+    width: 60%;
+    margin-top: .8em;
+
+    color: #fff;
+    
+    @include small
+    {
+        width: 70%;
+    }
+    @include large
+    {  
+        width: 80%;
+    }
+    @include extra
+    {  
+        width: 85%;
+    }    
+
+    p
+    {
+        font-size: .667em;
+        font-style: normal;
+
+        margin: .2em;
+
+        @include small
+        {
+            font-size: 0.8em;
+        }
+        @include large
+        {  
+            color: $black;
+            font-weight: bold;
+            font-size: 0.9em;
+            line-height: 1.1em;
+        }        
+    }
+}
+.footer__sub
+{
+    overflow: hidden;
+
+    width: 100%;
+    padding-left: $body-padding;
+
+    background: $dark-gray;
+
+    @include large
+    {
+        position: absolute;
+        background: none;
+        bottom: 17px;
+        right: 0;
+        padding-left: 0;
+        width: 80%;
+    }
+    @include extra
+    {
+        width: 85%;
+    }
+}
+.footer__subLinks
+{
+    position: relative;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+.footer__subList
+{
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 1rem .5rem;
+
+    text-align: left; 
+}
+.footer__subList:last-child
+{
+    float: right;
+    text-align: right;
+    width: 30%;
+    padding-right: $body-padding;
+
+    @include large
+    {
+        padding-right: $body-padding-lg;
+    }
+}
+.footer__subList:first-child
+{
+    padding-left: 0;
+}
+.footer__subLink
+{
+    font-size: .8em;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: #fff;
+    
+    &:hover,
+    &:focus
+    {
+        color: $iodaa-red;
+    }
+
+    @include small 
+    {
+        font-size: 1em;
+    }
+    @include large
+    {
+        color: $black;
+    }
+}
+.footer__logo
+{
+    width: 80%;
+    max-width: 100px;
+}
+.footer_decoration
+{   
+    display: none;
+
+    @include large 
+    {
+        display: block;
+        height: $body-padding-lg;
+        background: $iodaa-red;
+        width: auto;
+        margin-left: 2 * $body-padding-lg;
+        margin-right: 2 * $body-padding-lg;
+    }
+
+}

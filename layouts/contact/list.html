@@ -1,0 +1,51 @@
+{{ define "main" }}
+<section class="contact-cover">
+	<h1 class="contact-cover__headline">contact</h1>
+	<form action="list_submit" method="get" accept-charset="utf-8" class="contact-cover__form">
+		<fieldset>
+			<label for="form-name"><h4 class=form__label>Name</h4></label>
+      		<input placeholder="Your name" id="form-name" type="text" tabindex="1" required autofocus>
+    	</fieldset>
+		<fieldset>
+			<label for="form-email"><h4 class=form__label>Email</h4></label>
+      		<input placeholder="Your email address" id="form-email" type="email" tabindex="1" required autofocus>
+    	</fieldset>    	
+		<fieldset>
+			<label for="form-message"><h4 class=form__label>Message</h4></label>
+      		<textarea placeholder="Your message" id="form-message" tabindex="5" required></textarea>
+   		</fieldset>    	
+    
+    <fieldset class="form-buttonWrapper">
+      <button name="submit" type="submit" id="form-submit" data-submit="...Sending">Send</button>
+    </fieldset>
+	</form>
+</section>
+
+<section>
+	<address class="contact-address">
+		<h3>Zürich</h3>
+		<p>Administration & Showroom</p>
+    	<p>Zumikerstrasse 3</p>
+    	<p>CH - 8700 Küsnacht</p>
+    	<p>+41 (0)44 913 7070</p>
+    	<a href="mailto:office@iodaa.ch?subject=Mail from iodaa Site"><p>office@iodaa.ch</p></a>			
+	</address>
+	<address class="contact-address">
+		<h3>New York</h3>
+		<p>The Seagram Building</p>
+    	<p>375 Park Avenue</p>
+    	<p>Suite 2607</p>
+    	<p>New York, NY 10152-2600 USA</p>
+    	<p>T/F | +1 212 634 7474</p>			
+	</address>	
+	<address class="contact-address">
+		<h3>Tokyo</h3>
+		<p>Yuichiro Kishi Architects</p>
+    	<p>401 Lions Station Plaza Umejima</p>
+    	<p>3-3-24 Umejima, Adachi-ku</p>
+    	<p>Tokyo, JAPAN</p>
+    	<p>T/F | +81 3 3887 5410 </p>			
+	</address>				
+</section>
+
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+	<section class="project__cover" style="background-image: url('{{.Params.featuredImage}}')">
+		<h2 class="project__title">{{ .Title }}</h2>
+		<h4 class="project__category">{{ .Params.categories }}</h4>
+	</section>
+	
+	<article class="project__main">
+		<h3>Brief</h3>
+		{{ .Content }}
+	</article>
+ {{ end }}

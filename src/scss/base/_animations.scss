@@ -1,0 +1,59 @@
+@keyframes fadeInRight
+{
+    0%
+    {
+        opacity: 0;
+    }
+    1%
+    {
+        transform: translate3d(40%, 0, 0);
+
+        will-change: transform;
+    }
+    100%
+    {
+        transform: none;
+
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown
+{
+    from
+    {
+        transform: translate3d(0, -100%, 0);
+
+        opacity: 0;
+    }
+
+    to
+    {
+        transform: none;
+
+        opacity: 1;
+    }
+}
+
+/*@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    right: -40%;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}*/

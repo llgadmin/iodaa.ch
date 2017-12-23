@@ -1,0 +1,27 @@
+{{ $src := .Get "src" }}
+{{ $name := substr $src 0 -4 }}
+{{ $extension := substr $src (sub (len $src) 4) }}
+<div class="project__gallery">
+<picture>
+	<!-- Large screens -->
+    <source
+    media="(min-width: 1200px)"
+    srcset="{{ $name }}-xl{{ $extension }}">	
+    <!-- Large screens -->
+    <source
+    media="(min-width: 800px)"
+    srcset="{{ $name }}-lg{{ $extension }} 1x,
+            {{ $name }}-xl{{ $extension }} 2x">
+    <!-- Medium screens -->
+    <source
+    media="(min-width: 400px)"
+    srcset="{{ $name }}-md{{ $extension }} 1x,
+            {{ $name }}-lg{{ $extension }} 2x">   
+    <!-- Fallback -->
+    <img
+    src="{{ $name }}-sm{{ $extension }}"
+	srcset="{{ $name }}-md{{ $extension }} 2x"     
+    alt="{{ .Get "alt" }}"
+    class="project__image">
+</picture>
+</div>
