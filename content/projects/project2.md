@@ -1,7 +1,7 @@
 ---
 title: "Some Project"
 date: 2017-11-01T12:26:47+01:00
-draft: true
+draft: false
 featuredImage: "https://kevinsaintgrey.files.wordpress.com/2013/12/jaws.jpg?w=1000&h=&crop=1"
 categories: "Design"
 ---

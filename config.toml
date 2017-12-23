@@ -2,6 +2,7 @@ baseURL = "https://iodaa.ch/"
 languageCode = "en-us"
 title = "iodaa"
 theme = "husagu-theme"
+publishDir: "static"
 
 [[menu.main]]
     name = "Home"
