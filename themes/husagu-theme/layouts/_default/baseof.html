@@ -11,7 +11,7 @@
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link href='{{ "css/main.css" | absURL }}' rel='stylesheet' type="text/css" />
+        <link href='{{ "css/main.css" | relURL }}' rel='stylesheet' type="text/css" />
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -28,7 +28,7 @@
 
 
         <!-- Add your site or application content here -->  
-        <script src='{{ "js/scripts.js" | absURL }}' async defer></script> 
+        <script src='{{ "js/scripts.js" | relURL }}' async defer></script> 
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
